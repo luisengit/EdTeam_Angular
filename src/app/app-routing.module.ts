@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'material-demo',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
