@@ -1,17 +1,4 @@
 <mat-list>
-    <mat-list-item>
-        <img mat-line matListAvatar src="https://s14-eu5.startpage.com/cgi-bin/serveimage?url=http:%2F%2Fblog.ramboll.com%2Ffehmarnbelt%2Fwp-content%2Fthemes%2Framboll2%2Fimages%2Fprofile-img.jpg&sp=eb539b03fdccda361dca25bec5df9430" alt="">
-        <span mat-line>{{estudiante1.nombre}}</span>
-        <span mat-line>{{estudiante1.ciudad}}</span>
-    </mat-list-item>
-    <mat-list-item>
-        <img mat-line matListAvatar src="https://s14-eu5.startpage.com/cgi-bin/serveimage?url=http:%2F%2Fblog.ramboll.com%2Ffehmarnbelt%2Fwp-content%2Fthemes%2Framboll2%2Fimages%2Fprofile-img.jpg&sp=eb539b03fdccda361dca25bec5df9430" alt="">
-        <span mat-line>{{estudiante2.nombre}}</span>
-        <span mat-line>{{estudiante2.ciudad}}</span>
-    </mat-list-item>
-    <mat-list-item>
-        <img mat-line matListAvatar src="https://s14-eu5.startpage.com/cgi-bin/serveimage?url=http:%2F%2Fblog.ramboll.com%2Ffehmarnbelt%2Fwp-content%2Fthemes%2Framboll2%2Fimages%2Fprofile-img.jpg&sp=eb539b03fdccda361dca25bec5df9430" alt="">
-        <span mat-line>{{estudiante3.nombre}}</span>
-        <span mat-line>{{estudiante3.ciudad}}</span>
-    </mat-list-item>
+    <ed-item-estudiante *ngFor="let est of listaEstudiantes" [estudiante]="est" (onMouseClick)="onMouseClick($event)">
+    </ed-item-estudiante>
 </mat-list>

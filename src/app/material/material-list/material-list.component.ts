@@ -12,6 +12,8 @@ export class MaterialListComponent implements OnInit {
   estudiante2: Estudiante;
   estudiante3: Estudiante;
 
+  listaEstudiantes: Estudiante[];
+  
   constructor() { }
 
   ngOnInit() {
@@ -20,18 +22,26 @@ export class MaterialListComponent implements OnInit {
       id: 1,
       nombre: 'Luisen Poy',
       ciudad: 'Bilbao',
-      fotoURL: 'http://mipagina.com/foto.jpg'
+      // fotoURL: 'https://memeguy.com/photos/images/just-some-random-profile-photo-on-okcupid-136668.png'
     };
     this.estudiante2 = {
       id: 2,
       nombre: 'Ziortza Arrieta',
-      ciudad: 'New York'
+      ciudad: 'New York',
+      fotoURL: 'https://www2.ucar.edu/sites/default/files/staffnotes/2008/jaclyn.jpg'
     };
     this.estudiante3 = {
       id: 3,
       nombre: 'Enaitz Arrieta',
-      ciudad: 'París'
+      ciudad: 'París',
+      fotoURL: 'https://orig00.deviantart.net/76cb/f/2012/059/c/9/profile_picture_by_random_akatsuki_dude-d4rbims.jpg'
     };
+
+    this.listaEstudiantes = [
+      this.estudiante1, 
+      this.estudiante2, 
+      this.estudiante3
+    ];
 
     setTimeout(() => {
       this.estudiante3 = {
@@ -40,6 +50,10 @@ export class MaterialListComponent implements OnInit {
         ciudad: 'Londres'
       }
     }, 3000);
+  }
+
+  onMouseClick($event: Estudiante) {
+    console.log('Click on: ', $event.nombre);
   }
 
 }

@@ -1,3 +1,12 @@
-<p>
-  home works!
-</p>
+<div>
+    <mat-card>
+        <h3>Astronomy Picture of de Day</h3>
+        <mat-card-header>
+            <img mat-card-avatar src="https://media.giphy.com/media/sdcIxdTkFD0g8/giphy.gif">
+            <mat-card-title>{{apod.title}}</mat-card-title>
+            <mat-card-subtitle>{{apod.date}}</mat-card-subtitle>
+        </mat-card-header>
+
+        <img mat-card-image [src]="apod.url">
+    </mat-card>
+</div>
