@@ -1,27 +1,46 @@
-# EdteamAngular
+# Angular desde cero
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+Mira el desarrollo del proyecto **desde cero**, paso a paso en el curso: [ed.team/angular](https://ed.team/angular).
 
-## Development server
+## Demo Proyecto Final
+Prueba nuestro proyecto final aquí: [https://angular-apod.firebaseapp.com](https://angular-apod.firebaseapp.com)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![](https://luixaviles.com/assets/images/gifs/angular-apod.gif?raw=true)
 
-## Code scaffolding
+## Versión de Angular
+Nuestro proyecto está desarrollado sobre la base de Angular 5.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Ejecutando la aplicación localmente
+## Setup del entorno de desarrollo
+Necesitas instalar:
+* Git
+* Node
+* Visual Studio Code
 
-## Build
+Puedes seguir la guía en mi blog para mayores detalles: [Setting up local environment to Develop Angular Applications](https://luixaviles.com/2017/08/setup-local-environment-angular-apps)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Instalar `Angular CLI`:
+```
+npm install -g @angular/cli
+```
 
-## Running unit tests
+## Clonar el Repositorio
+```
+git clone https://github.com/luixaviles/edteam-angular.git
+cd edteam-angular
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instala dependencias
+```
+npm install
+```
+## Vista Previa de la Aplicación
 
-## Running end-to-end tests
+```
+ng serve -o
+```
+Este comando deberá abrir tu Navegador predeterminado en `http://localhost:4200/`. La app se recarga automáticamente en caso de modificar el código.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Ayuda
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Si necesitas ayuda o tienes algun problema con el proyecto, por favor agrega un comentario en la plataforma [ed.team/angular](https://ed.team/angular). 
