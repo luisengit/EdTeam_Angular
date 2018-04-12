@@ -1,12 +1,43 @@
-<div>
-    <mat-card>
+<!-- Cuando esta definido obj apod -->
+<div class="card-container" *ngIf="apod">
+    <mat-card class="card-content">
         <h3>Astronomy Picture of de Day</h3>
         <mat-card-header>
             <img mat-card-avatar src="https://media.giphy.com/media/sdcIxdTkFD0g8/giphy.gif">
             <mat-card-title>{{apod.title}}</mat-card-title>
-            <mat-card-subtitle>{{apod.date}}</mat-card-subtitle>
+            <mat-card-subtitle>{{apod.date | date:'fullDate'}}</mat-card-subtitle>
         </mat-card-header>
 
         <img mat-card-image [src]="apod.url">
+
+        <mat-card-content>
+            <p>{{apod.explanation}}</p>
+        </mat-card-content>
+
+        <mat-card-footer>
+            <button mat-button> Like </button>
+            <button mat-button> Share </button>
+        </mat-card-footer>
+
     </mat-card>
 </div>
+
+<!-- En caso no esté definido obj apod ni tengamos nigún error -->
+<div class="card-container" *ngIf="!apod && !error">
+    <mat-spinner class="card-content"></mat-spinner>
+</div>
+
+<div *ngIf="error">
+    <mat-card class="card-content">
+        {{error}}
+    </mat-card>
+</div>
+
+
+<!-- <div>
+    Sin pipe: {{apod.title}} Con pipe: {{apod.title | lowercase}}
+</div> -->
+
+<!-- <pre>
+    {{ apod | json }}
+</pre> -->

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,20 +9,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
+import { NasaApiService } from './shared/services/nasa-api.service';
+import { LowerCasePipe } from './shared/pipes/lower-case.pipe';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    LowerCasePipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule    
   ],
-  providers: [],
+  providers: [NasaApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
